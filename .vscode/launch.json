@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/mikolajskaziak/Desktop/studia/pk/Rozwiazania/DoKolokwium_nr2/kolosy/grupa1",
+      "program": "/Users/mikolajskaziak/Desktop/studia/pk/Rozwiazania/DoKolokwium_nr2/kolosy/grupa1/build/Debug/outDebug"
+    }
+  ]
+}
