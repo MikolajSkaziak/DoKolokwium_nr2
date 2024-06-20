@@ -1,5 +1,4 @@
 #include "klasy.h"
-#include <iostream>
 
 int Telefon::licznikZablokowannych=0;
 
@@ -9,10 +8,10 @@ int Telefon::licznikZablokowannych=0;
 int main()
 {
     Operator op("Orange");
-    Telefon t("123456789","1234",100,czyOdblokowany::wlaczony,&op);
+    Telefon t("123-456-789","1234",100,czyOdblokowany::wlaczony,&op);
     SystemOperacyjny sys("Android");
     Smartfon s(&sys,t);
-
+    cout<<t.getNumer()<<endl;
     Smartfon s2= TelefontoSmartfon(&sys,t);
     sys.setKosztObliczeniowy(0.5);
     /*cout<<sys.getKosztObliczeniowy()<<endl;

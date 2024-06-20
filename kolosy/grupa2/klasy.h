@@ -1,7 +1,8 @@
 #pragma once
-
+#include <iostream>
 #include <cstring>
 #include <cassert>
+#include <iomanip>
 using namespace std;
 
 enum class czyOdblokowany
@@ -88,11 +89,15 @@ class Telefon
         setOperator(op);
     }
     void setNumer(const char* numer_)
-    {
-        assert(numer_!=nullptr);
-        strncpy(numer,numer_,sizeof(numer));
-        numer[sizeof(numer)-1]='\0';
+{
+    assert(numer_!=nullptr);
+    if (strlen(numer_) != 11 || numer_[3] != '-' || numer_[7] != '-') {
+        throw invalid_argument("Numer powinien być w formacie xxx-xxx-xxx");
     }
+
+    strncpy(numer, numer_, sizeof(numer));
+    numer[sizeof(numer)-1] = '\0';
+}
     void setstanBaterii(int stan)
     {
         assert(stan>=0 && stan<=100);
